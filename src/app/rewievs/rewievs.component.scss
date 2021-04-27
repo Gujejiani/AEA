@@ -1,0 +1,30 @@
+.wrapper {
+  margin-top: 100px;
+  position: relative;
+}
+
+.review {
+  &__title {
+    font-size: 30px;
+    color: #52565e;
+    text-align: center;
+    font-weight: bold;
+  }
+  &__parent {
+    position: relative;
+  }
+  &__icons {
+    display: flex;
+    justify-content: center;
+    &__left {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    &__right {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}

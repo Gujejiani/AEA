@@ -9,6 +9,8 @@ import { WhatWeDoComponent } from './what-we-do/what-we-do.component';
 import { WhatWeDoItemComponent } from './what-we-do/what-we-do-item/what-we-do-item.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { VideoComponent } from './video/video.component';
+import { RewievsComponent } from './rewievs/rewievs.component';
+import { ReviewComponent } from './rewievs/review/review.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { VideoComponent } from './video/video.component';
     WhatWeDoComponent,
     WhatWeDoItemComponent,
     ProjectsComponent,
-    VideoComponent
+    VideoComponent,
+    RewievsComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,

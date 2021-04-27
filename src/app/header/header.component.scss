@@ -3,9 +3,11 @@
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 0;
   &__container {
     padding: 0 50px;
-    padding-top: 10px;
   }
 }
 
@@ -27,8 +29,11 @@
 
     &__item {
       &__link {
-        padding-bottom: 5px;
+        padding: 5px 7px;
+
         position: relative;
+        font-weight: bold;
+
         &:hover {
           &::after {
             position: absolute;
@@ -45,6 +50,9 @@
         color: #52565e;
 
         &--active {
+          background-color: #7d86e9;
+          border-radius: 4px;
+          color: #fff;
         }
       }
     }

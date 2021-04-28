@@ -1,34 +1,39 @@
 <div class="wrapper">
+  <img
+    class="review__icons__left"
+    src="../../assets/review-icons-1.svg"
+    alt="icon"
+  />
+  <img
+    class="review__icons__right"
+    src="../../assets/review-icons-2.svg"
+    alt="icons"
+  />
   <div class="review">
     <div class="review__title">Reviews</div>
   </div>
-  <div class="review__icons">
-    <div (click)="showPrevious()">
-      <img
-        class="review__icons__left"
-        src="../../assets/review-icons-1.svg"
-        alt="icon"
-      />
-    </div>
-    <div class="review__parent">
+  <div class="review__parent">
+    <img
+      src="./assets/letf-arrow.svg"
+      alt="arrow"
+      class="review__slider__main__left"
+      (click)="showPrevious()"
+    />
+    <div class="review__icons">
+      <!-- prettier-ignore-attribute -->
       <app-review
-        [src]="'./assets/review-1.jpg'"
-        [name]="'Med Habib '"
+        *ngFor="let reviewer of reviewers; i as index;"
+        class="reviewers"
+        [src]="reviewer.src"
+        [name]="reviewer.name"
       ></app-review>
-      <app-review
-        [src]="'./assets/review-2.jpg'"
-        [name]="'Sameh Ben Hmida'"
-      ></app-review>
-      <app-review
-        [src]="'./assets/review-3.jpg'"
-        [name]="'Marine Desbrun'"
-      ></app-review>
+      <!-- prettier-ignore-attribute (mouseup) -->
     </div>
     <img
+      src="./assets/right-arrow.svg"
+      alt="arrow"
+      class="review__slider__main__right"
       (click)="showNext()"
-      class="review__icons__right"
-      src="../../assets/review-icons-2.svg"
-      alt="icons"
     />
   </div>
 </div>

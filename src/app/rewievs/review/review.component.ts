@@ -9,6 +9,7 @@ export class ReviewComponent implements OnInit {
   @Input() src: string;
   @Input() name: string;
   @Input() review: string;
+
   constructor() {}
 
   ngOnInit(): void {}

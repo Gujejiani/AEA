@@ -12,10 +12,21 @@
   }
   &__parent {
     position: relative;
+    max-width: 500px;
+    margin: auto;
   }
   &__icons {
     display: flex;
     justify-content: center;
+    position: relative;
+    max-width: 400px;
+
+    margin: auto;
+    overflow: hidden;
+    height: 450px;
+    &__view {
+      background-color: red;
+    }
     &__left {
       position: absolute;
       left: 0;
@@ -27,4 +38,23 @@
       top: 0;
     }
   }
+}
+.reviewers {
+  position: absolute;
+  transition: transform 0.6s ease-in-out;
+}
+
+.review__slider__main__left {
+  position: absolute;
+  left: 0;
+  top: 330px;
+  cursor: pointer;
+  z-index: 30;
+}
+.review__slider__main__right {
+  position: absolute;
+  right: 0;
+  top: 330px;
+  cursor: pointer;
+  z-index: 30;
 }

@@ -5,9 +5,8 @@
   margin: 40px;
 
   &__slider {
-    position: absolute;
-    top: 0;
     text-align: center;
+
     &__img {
       width: 100px;
       height: 100px;
@@ -24,9 +23,6 @@
       display: flex;
       margin-top: 50px;
 
-      &__change {
-        cursor: pointer;
-      }
       &__review {
         min-width: 300px;
         height: 100px;

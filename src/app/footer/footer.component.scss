@@ -1,0 +1,48 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: rbg(252, 222, 195, 0.2);
+  padding: 50px;
+
+  &__img {
+  }
+  &__contact {
+    color: #52565e;
+    font-size: 18px;
+    font-weight: bold;
+    li {
+      margin-bottom: 20px;
+      span {
+        font-weight: normal;
+      }
+    }
+    &__title {
+    }
+    &__email {
+    }
+    &__tel {
+    }
+    &__follow {
+    }
+    &__icons {
+      display: flex;
+      max-width: 120px;
+      justify-content: space-between;
+    }
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    &__li {
+      margin-bottom: 20px;
+      &__link {
+        color: #52565e;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -11,6 +11,9 @@ import { ProjectsComponent } from './projects/projects.component';
 import { VideoComponent } from './video/video.component';
 import { RewievsComponent } from './rewievs/rewievs.component';
 import { ReviewComponent } from './rewievs/review/review.component';
+import { PartnersComponent } from './partners/partners.component';
+import { PartnerComponent } from './partners/partner/partner.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { ReviewComponent } from './rewievs/review/review.component';
     ProjectsComponent,
     VideoComponent,
     RewievsComponent,
-    ReviewComponent
+    ReviewComponent,
+    PartnersComponent,
+    PartnerComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

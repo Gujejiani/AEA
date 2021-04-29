@@ -1,0 +1,35 @@
+<div class="partners">
+  <div class="partners__title">
+    <h2 class="partners__title__h2">Partners WorldWide</h2>
+    <img
+      class="partners__title__img"
+      src="./assets/partners-points.svg "
+      alt="img"
+    />
+  </div>
+
+  <div class="partners__img">
+    <img src="./assets/map.svg" alt="partners" />
+  </div>
+  <div class="partners__section">
+    <img
+      src="./assets/letf-arrow.svg"
+      alt="arrow"
+      class="partners__section__move"
+      (click)="showPrevious()"
+    />
+    <div class="partners__section__wrapper">
+      <app-partner
+        *ngFor="let partner of partners"
+        class="partners__section__partner"
+        [src]="partner"
+      ></app-partner>
+    </div>
+    <img
+      src="./assets/right-arrow.svg"
+      alt="arrow"
+      class="partners__section__move"
+      (click)="showNext()"
+    />
+  </div>
+</div>

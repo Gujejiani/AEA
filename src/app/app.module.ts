@@ -4,16 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { WhatWeDoComponent } from './what-we-do/what-we-do.component';
-import { WhatWeDoItemComponent } from './what-we-do/what-we-do-item/what-we-do-item.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { VideoComponent } from './video/video.component';
-import { RewievsComponent } from './rewievs/rewievs.component';
-import { ReviewComponent } from './rewievs/review/review.component';
-import { PartnersComponent } from './partners/partners.component';
-import { PartnerComponent } from './partners/partner/partner.component';
+import { WelcomeComponent } from './home/welcome/welcome.component';
+import { WhatWeDoComponent } from './home/what-we-do/what-we-do.component';
+import { WhatWeDoItemComponent } from './home/what-we-do/what-we-do-item/what-we-do-item.component';
+import { ProjectsComponent } from './home/projects/projects.component';
+import { VideoComponent } from './home/video/video.component';
+import { RewievsComponent } from './home/rewievs/rewievs.component';
+import { ReviewComponent } from './home/rewievs/review/review.component';
+import { PartnersComponent } from './home/partners/partners.component';
+import { PartnerComponent } from './home/partners/partner/partner.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +30,12 @@ import { FooterComponent } from './footer/footer.component';
     ReviewComponent,
     PartnersComponent,
     PartnerComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    AboutComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

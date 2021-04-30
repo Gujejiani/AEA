@@ -53,6 +53,11 @@
           background-color: #7d86e9;
           border-radius: 4px;
           color: #fff;
+          &:hover {
+            &::after {
+              display: none;
+            }
+          }
         }
       }
     }

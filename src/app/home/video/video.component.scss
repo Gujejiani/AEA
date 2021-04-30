@@ -13,21 +13,31 @@
 .video {
   &__container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
   }
   &__description {
-    font-weight: bold;
     text-align: center;
     color: #52565e;
     text-align: justify;
     margin-bottom: 30px;
-    flex: 40%;
+    font-size: 22px;
+    color: #52565e;
     padding: 0 50px;
-    max-width: 300px;
+    flex: 40%;
     line-height: 25px;
     padding-left: 0;
+    p {
+      max-width: 350px;
+    }
   }
   &__vid {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+  &__parent {
     flex: 55%;
+    background-color: red;
+    height: 400px;
   }
 }

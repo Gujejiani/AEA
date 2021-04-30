@@ -14,15 +14,17 @@
     flex: 40%;
 
     &__title {
-      font-size: 25px;
+      font-size: 36px;
       font-weight: bold;
       color: #52565e;
     }
     &__description {
       margin-top: 30px;
-      max-width: 300px;
-      line-height: 25px;
+      max-width: 350px;
+      line-height: 30px;
       text-align: justify;
+      font-size: 22px;
+      color: #52565e;
     }
   }
 

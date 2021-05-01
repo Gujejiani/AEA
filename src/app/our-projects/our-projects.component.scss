@@ -1,0 +1,44 @@
+.wrapper {
+}
+
+.projects {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  &__icons {
+    position: relative;
+    margin: 200px 0;
+    &__1 {
+      position: absolute;
+      top: -200px;
+      left: -50px;
+    }
+    &__2 {
+      position: absolute;
+
+      right: 0;
+      bottom: -150px;
+    }
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 28px;
+    color: #000000;
+  }
+  &__description {
+    margin-top: 50px;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 450px;
+    text-align: justify;
+  }
+  &__img {
+  }
+  &__left {
+    flex: 1;
+  }
+
+  &__right {
+    flex: 1;
+  }
+}

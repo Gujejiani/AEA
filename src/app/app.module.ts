@@ -16,6 +16,7 @@ import { PartnerComponent } from './home/partners/partner/partner.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { OurProjectsComponent } from './our-projects/our-projects.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { AboutComponent } from './about/about.component';
     FooterComponent,
     HomeComponent,
     AboutComponent,
+    OurProjectsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

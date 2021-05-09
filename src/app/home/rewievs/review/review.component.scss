@@ -8,15 +8,15 @@
     text-align: center;
 
     &__img {
-      width: 100px;
-      height: 100px;
+      width: 130px;
+      height: 130px;
       border-radius: 100%;
     }
     &__reviewer {
       display: inline-block;
       margin-top: 15px;
       font-weight: bold;
-      color: #ffc845;
+      color: #f48823;
       cursor: pointer;
     }
     &__main {
@@ -25,13 +25,13 @@
 
       &__review {
         min-width: 300px;
-        height: 100px;
+        height: 120px;
         box-shadow: 5px 5px 5px rgba(99, 126, 236, 0.2);
-
         margin: 0 30px;
-        max-width: 340px;
+        max-width: 390px;
+
         width: 500px;
-        padding: 20px;
+        padding: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -45,8 +45,8 @@
 }
 
 .img__wrapper {
-  width: 140px;
-  height: 140px;
+  width: 150px;
+  height: 150px;
   border-radius: 100%;
   background-color: #7d86e9;
   display: flex;

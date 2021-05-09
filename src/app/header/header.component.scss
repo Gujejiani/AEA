@@ -23,13 +23,13 @@
 
   &__list {
     display: flex;
-    max-width: 450px;
+    max-width: 600px;
     width: 100%;
     justify-content: space-between;
 
     &__item {
       &__link {
-        padding: 5px 7px;
+        padding: 5px 18px;
 
         position: relative;
         font-weight: bold;

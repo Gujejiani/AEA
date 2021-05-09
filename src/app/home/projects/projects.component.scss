@@ -10,6 +10,7 @@
   justify-content: space-between;
 
   width: 100%;
+  padding: 0 50px;
   &__info {
     flex: 40%;
 
@@ -17,12 +18,13 @@
       font-size: 36px;
       font-weight: bold;
       color: #52565e;
+      margin-top: 70px;
     }
     &__description {
       margin-top: 30px;
       max-width: 350px;
       line-height: 30px;
-      text-align: justify;
+
       font-size: 22px;
       color: #52565e;
     }

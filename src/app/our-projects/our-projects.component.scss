@@ -3,6 +3,11 @@
   @media (min-width: 1890px) {
     height: 70vh;
   }
+  color: #52565e;
+  margin-bottom: 100px;
+  position: relative;
+  &__2 {
+  }
 }
 
 .projects {
@@ -22,11 +27,11 @@
 
     &__img {
       position: absolute;
-      bottom: -320px;
+      bottom: -380px;
     }
     &__2 {
       position: absolute;
-      bottom: 10px;
+      bottom: 120px;
       padding-left: 100px;
       width: 100%;
       font-size: 20px;
@@ -56,17 +61,23 @@
       height: 100%;
       padding-right: 150px;
       padding-left: 100px;
-      padding-top: 50px;
-      max-height: 300px;
+      padding-top: 10px;
+      max-height: 500px;
+      min-width: 422px;
+      min-height: 316px;
+      z-index: -5;
     }
     &__text {
       position: absolute;
       font-size: 20px;
       line-height: 30px;
-      background-color: rgba(166, 111, 166, 0.1);
+      background-color: rgb(247, 237, 247);
       padding: 50px;
       width: 110%;
       right: 0;
+      bottom: -200px;
+      z-index: 10;
+      color: #52565e;
       &__description {
         margin-top: 40px;
       }
@@ -82,7 +93,7 @@
   padding-bottom: 300px;
   position: relative;
   @media (min-width: 1890px) {
-    max-width: 1300px;
+    max-width: 1500px;
   }
   &__description {
     font-size: 20px;

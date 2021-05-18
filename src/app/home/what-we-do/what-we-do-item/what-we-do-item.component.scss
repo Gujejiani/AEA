@@ -1,7 +1,7 @@
 .item {
-  max-width: 300px;
+  max-width: 310px;
   height: 480px;
-
+  min-width: 310px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -9,7 +9,7 @@
   align-items: center;
   box-shadow: 15px 15px 15px rgba(99, 126, 236, 0.2);
   &__title {
-    font-size: 25px;
+    font-size: 22px;
     font-weight: bold;
     max-width: 160px;
     color: #52565e;
@@ -18,9 +18,9 @@
   }
   &__text {
     line-height: 25px;
-
     padding: 0 30px;
     color: #52565e;
+    font-size: 18px;
   }
   &__btn {
     background-color: #637eec;
@@ -30,5 +30,6 @@
     color: #fff;
     cursor: pointer;
     border-radius: 4px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
   }
 }

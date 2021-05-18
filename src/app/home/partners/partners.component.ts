@@ -11,25 +11,73 @@ interface Partner {
 export class PartnersComponent implements OnInit, AfterViewInit {
   constructor() {}
   currentSlide: number = 0;
-  partners: String[] = [
-    './assets/partners/partner-1.svg',
-    './assets/partners/partner-2.svg',
-    './assets/partners/partner-3.svg',
-    './assets/partners/partner-4.svg',
-    './assets/partners/partner-5.svg',
-    './assets/partners/partner-6.svg',
-    './assets/partners/partner-7.svg',
-    './assets/partners/partner-8.svg',
-    './assets/partners/partner-9.svg',
-    './assets/partners/partner-10.svg',
-    './assets/partners/partner-11.svg',
-    './assets/partners/partner-12.svg',
-    './assets/partners/partner-13.svg',
-  ];
-  Partners: Partner[] = [
+  // partners: String[] = [
+  //   './assets/partners/partner-1.svg',
+  //   './assets/partners/partner-2.svg',
+  //   './assets/partners/partner-3.svg',
+  //   './assets/partners/partner-4.svg',
+  //   './assets/partners/partner-5.svg',
+  //   './assets/partners/partner-6.svg',
+  //   './assets/partners/partner-7.svg',
+  //   './assets/partners/partner-8.svg',
+  //   './assets/partners/partner-9.svg',
+  //   './assets/partners/partner-10.svg',
+  //   './assets/partners/partner-11.svg',
+  //   './assets/partners/partner-12.svg',
+  //   './assets/partners/partner-13.svg',
+  // ];
+  partners: Partner[] = [
     {
       src: './assets/partners/partner-1.svg',
-      link: 'www.ateliereuropeo.eu',
+      link: 'https://www.ateliereuropeo.eu',
+    },
+    {
+      src: './assets/partners/partner-2.svg',
+      link: 'https://www.bironlus.eu/',
+    },
+    {
+      src: './assets/partners/partner-3.svg',
+      link: 'https://hors-pistes.org/',
+    },
+    {
+      src: './assets/partners/partner-4.svg',
+      link: 'https://mladiinfo.sk/',
+    },
+    {
+      src: './assets/partners/partner-5.svg',
+      link: 'https://www.ccab.tn/',
+    },
+    {
+      src: './assets/partners/partner-6.svg',
+      link: 'http://www.cultureclash4u.com/',
+    },
+    {
+      src: './assets/partners/partner-7.svg',
+      link: 'https://ngo-stella.org/',
+    },
+    {
+      src: './assets/partners/partner-8.svg',
+      link: 'https://www.eu.sumy.ua/',
+    },
+    {
+      src: './assets/partners/partner-9.svg',
+      link: 'https://www.facebook.com/youthhubcyprus/',
+    },
+    {
+      src: './assets/partners/partner-10.svg',
+      link: 'https://www.bulgarianyf.eu/',
+    },
+    {
+      src: './assets/partners/partner-11.svg',
+      link: 'https://www.hyvarila.com/',
+    },
+    {
+      src: './assets/partners/partner-12.svg',
+      link: 'https://www.marta.lv/',
+    },
+    {
+      src: './assets/partners/partner-13.svg',
+      link: 'https://www.hellasforus.com/',
     },
   ];
   ngOnInit(): void {}

@@ -20,26 +20,26 @@ export class RewievsComponent implements OnInit, AfterViewInit {
     {
       name: 'Med Habib',
       description:
-        'It was amazing experience for me, Thanks to the AEA for this opportunity',
+        'It was an amazing experience for me, Thanks to the AEA for this opportunity',
       src: './assets/review-1.jpg',
     },
     {
       name: 'Sameh Ben Hmida',
       description:
-        'It was amazing experience for me, Thanks to the AEA for this opportunity',
-      src: './assets/review-2.jpg',
+        ' This intercultural exchange has helped me share experience with other people and discover new amazing country and new ways of dealing with young people.',
+      src: './assets/review-22.jpg',
     },
     {
       name: 'Marine Desbrun',
       description:
-        'It was amazing experience for me, Thanks to the AEA for this opportunity',
+        '  I spent colorful days in a colorful country, the knowledge gained during the project will be useful to me  ',
       src: './assets/review-3.jpg',
     },
     {
-      name: 'Emiel van Kesterb',
+      name: 'Emiel Bakker',
       description:
-        'It was amazing experience for me, Thanks to the AEA for this opportunity',
-      src: './assets/review-4.jpg',
+        'It was an experience never to be forgotten. Not only did I meet amazing people, but I also learned a lot from them. This gained experience enriched me as a person and would not have been possible without the project',
+      src: './assets/review-44.jpg',
     },
   ];
   showPrevious() {

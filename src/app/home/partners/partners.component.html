@@ -22,7 +22,9 @@
       <app-partner
         *ngFor="let partner of partners"
         class="partners__section__partner"
-        [src]="partner"
+        [src]="partner.src"
+        [url]="partner.link"
+        ngClass
       ></app-partner>
     </div>
     <img

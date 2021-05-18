@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PartnerComponent implements OnInit {
   @Input() src: string;
+  @Input() url: string;
   constructor() {}
 
   ngOnInit(): void {}

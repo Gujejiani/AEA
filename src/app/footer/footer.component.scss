@@ -3,14 +3,23 @@
   justify-content: space-between;
   background-color: rgba(252, 222, 195, 0.2);
   padding: 50px;
+  @media only screen and (max-width: 1050px){
+    justify-content: space-around;
+    }
   &__img {
     position: relative;
     z-index: -10;
+    @media only screen and (max-width: 1050px){
+      display: none;
+      }
   }
   &__contact {
     color: #52565e;
     font-size: 18px;
     font-weight: bold;
+    @media only screen and (max-width: 950px){
+      font-size: 16px;
+      }
 
     li {
       margin-bottom: 20px;
@@ -36,8 +45,12 @@
 
 .nav {
   &__list {
+
     display: flex;
     flex-direction: column;
+    @media only screen and (max-width: 1050px){
+    display: none;
+      }
     &__li {
       margin-bottom: 20px;
       &__link {

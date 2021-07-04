@@ -17,6 +17,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { OurProjectsComponent } from './our-projects/our-projects.component';
+import { BugrerMenuComponent } from './UI/bugrer-menu/bugrer-menu.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { OurProjectsComponent } from './our-projects/our-projects.component';
     HomeComponent,
     AboutComponent,
     OurProjectsComponent,
+    BugrerMenuComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

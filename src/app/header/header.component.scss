@@ -19,6 +19,9 @@
   align-items: center;
 
   &__logo {
+    @media only screen and (max-width: 750px){
+      display: none;
+      }
   }
 
   &__list {
@@ -26,6 +29,9 @@
     max-width: 600px;
     width: 100%;
     justify-content: space-between;
+     @media only screen and (max-width: 1050px){
+     display: none;
+     }
 
     &__item {
       &__link {
@@ -67,5 +73,8 @@
     max-width: 100px;
     width: 100%;
     justify-content: space-between;
+    @media only screen and (max-width: 650px){
+      display: none;
+      }
   }
 }

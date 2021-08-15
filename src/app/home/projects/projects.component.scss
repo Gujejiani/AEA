@@ -3,6 +3,9 @@
   background-color: #f6f1f6;
   margin-top: 100px;
   position: relative;
+  @media only screen and (max-width: 750px){
+    padding-top: 0;
+        }
 }
 
 .project {
@@ -14,18 +17,31 @@
   @media only screen and (max-width: 1050px){
     padding: 0;
     }
+  @media only screen and (max-width: 750px){
+   flex-direction: column;
+    }
   &__info {
     flex: 40%;
-
     &__title {
       font-size: 36px;
       font-weight: bold;
       color: #52565e;
       margin-top: 70px;
+      @media only screen and (max-width: 550px){
+       font-size: 25px;
+              }
     }
     &__description {
       margin-top: 30px;
       max-width: 390px;
+      @media only screen and (max-width: 750px){
+      max-width: 100%;
+      text-align: justify;
+      margin-bottom: 50px;
+            }
+    @media only screen and (max-width: 550px){
+     font-size: 16px;
+           }
       line-height: 30px;
 
       font-size: 22px;
@@ -43,5 +59,8 @@
   &__icons {
     position: absolute;
     bottom: -90px;
+    @media only screen and (max-width: 550px){
+display: none;
+      }
   }
 }

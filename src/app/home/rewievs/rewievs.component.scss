@@ -19,11 +19,13 @@
     display: flex;
     justify-content: center;
     position: relative;
-    max-width: 400px;
 
-    margin: auto;
-    overflow: hidden;
-    height: 450px;
+
+    max-width: 450px;
+
+   overflow: hidden;
+    height: 500px;
+
     &__view {
       background-color: red;
     }
@@ -31,11 +33,17 @@
       position: absolute;
       left: 0;
       top: 0;
+      @media only screen and (max-width: 850px){
+        display: none;
+                }
     }
     &__right {
       position: absolute;
       right: 0;
       top: 0;
+      @media only screen and (max-width: 850px){
+        display: none;
+                }
     }
   }
 }
@@ -50,6 +58,15 @@
   top: 335px;
   cursor: pointer;
   z-index: 30;
+  @media only screen and (max-width: 750px){
+   top: 130px;
+   left: 30px;
+            }
+
+    @media only screen and (max-width: 621px){
+         width: 40px;
+         left: -30px;
+      }
 }
 .review__slider__main__right {
   position: absolute;
@@ -57,4 +74,12 @@
   top: 335px;
   cursor: pointer;
   z-index: 30;
+  @media only screen and (max-width: 750px){
+    top: 130px;
+    right: 30px;
+       }
+   @media only screen and (max-width: 621px){
+   width: 40px;
+   right: -30px;
+   }
 }

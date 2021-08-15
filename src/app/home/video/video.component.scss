@@ -1,6 +1,9 @@
 .wrapper {
   margin-top: 150px;
   position: relative;
+  @media only screen and (max-width: 550px){
+    margin-top: 50px;
+  }
   &__title {
     text-align: center;
     width: 100%;
@@ -8,12 +11,18 @@
     font-weight: bold;
     color: #52565e;
     margin-bottom: 100px;
+    @media only screen and (max-width: 750px){
+      margin-bottom: 50px;
+    }
   }
 }
 .video {
   &__container {
     display: flex;
     justify-content: space-between;
+    @media only screen and (max-width: 750px){
+     flex-direction: column;
+             }
   }
   &__description {
     text-align: center;
@@ -26,8 +35,22 @@
     flex: 40%;
     line-height: 25px;
     padding-left: 0;
-    p {
+    @media only screen and (max-width: 750px){
+      padding: 0;
+      font-size: 20px;
+             }
+    &__text {
       max-width: 350px;
+      @media only screen and (max-width: 750px){
+        max-width: 100%;
+               }
+
+            &__p{
+            @media only screen and (max-width: 750px){
+            margin-bottom: 30px;
+                   }
+    }
+
     }
   }
   &__vid {
@@ -39,5 +62,15 @@
     flex: 55%;
 
     height: 400px;
+    &--web{
+      @media only screen and (max-width: 750px){
+       display: none;
+               }
+    }
+    &--mob{
+      @media only screen and (min-width: 750px){
+        display: none;
+                }
+    }
   }
 }

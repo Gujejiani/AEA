@@ -1,4 +1,10 @@
 .partner {
+  display: flex;
+  justify-content: center;
   &__img {
+    width: 200px;
+    @media only screen and (max-width: 621px){
+       width: 130px;
+    }
   }
 }

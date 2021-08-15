@@ -11,6 +11,8 @@ interface Partner {
 export class PartnersComponent implements OnInit, AfterViewInit {
   constructor() {}
   currentSlide: number = 0;
+
+  translateValue: number = 170;
   // partners: String[] = [
   //   './assets/partners/partner-1.svg',
   //   './assets/partners/partner-2.svg',
@@ -84,7 +86,7 @@ export class PartnersComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     const partners = document.querySelectorAll('.partners__section__partner');
     partners.forEach((partner: HTMLElement, i) => {
-      partner.style.transform = `translateX(${170 * i}%)`;
+      partner.style.transform = `translateX(${this.translateValue * i}%)`;
     });
   }
   showPrevious() {
@@ -121,7 +123,7 @@ export class PartnersComponent implements OnInit, AfterViewInit {
   goToSlide(slideIndex: number) {
     const partners = document.querySelectorAll('.partners__section__partner');
     partners.forEach((partner: HTMLElement, i) => {
-      partner.style.transform = `translateX(${170 * (i - slideIndex)}%)`;
+      partner.style.transform = `translateX(${this.translateValue * (i - slideIndex)}%)`;
     });
   }
 }

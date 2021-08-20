@@ -18,7 +18,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { OurProjectsComponent } from './our-projects/our-projects.component';
 import { BugrerMenuComponent } from './UI/bugrer-menu/bugrer-menu.component';
-
+import {MobNavComponent} from './home/mob-nav/mob-nav.component';
+import { NavImagesComponent } from './home/mob-nav/nav-images/nav-images.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,8 @@ import { BugrerMenuComponent } from './UI/bugrer-menu/bugrer-menu.component';
     AboutComponent,
     OurProjectsComponent,
     BugrerMenuComponent,
+    MobNavComponent,
+    NavImagesComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

@@ -1,0 +1,16 @@
+.slider{
+  position: absolute;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: flex-start;
+  height: 100%;
+  flex-wrap: wrap;
+  &__img{
+    width: 30px;
+    color: #fff;
+    opacity: 0.2;
+    margin: 5px 5px;
+  }
+}

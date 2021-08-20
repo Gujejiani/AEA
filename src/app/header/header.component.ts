@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  toggle: boolean
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  onToggleMenu(toggle: boolean){
+    this.toggle = toggle
+  }
 }

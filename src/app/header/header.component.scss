@@ -87,4 +87,21 @@
       display: none;
       }
   }
+
+  &__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+
+    &__show{
+      visibility: visible;
+      opacity: 0.2;
+    }
+  }
 }

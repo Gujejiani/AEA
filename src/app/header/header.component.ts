@@ -13,6 +13,5 @@ export class HeaderComponent implements OnInit {
   }
   onToggleMenu(toggle: boolean){
     this.toggle = toggle
-    console.log(toggle)
   }
 }

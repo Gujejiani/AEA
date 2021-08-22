@@ -9,6 +9,9 @@
     color: #52565e;
     text-align: center;
     font-weight: bold;
+    @media only screen and (max-width: 550px){
+      font-size: 22px;
+    }
   }
   &__parent {
     position: relative;
@@ -21,7 +24,7 @@
     position: relative;
 
 
-    max-width: 450px;
+    max-width: 430px;
 
    overflow: hidden;
     height: 500px;
@@ -70,7 +73,7 @@
 }
 .review__slider__main__right {
   position: absolute;
-  right: -100px;
+  right: -40px;
   top: 335px;
   cursor: pointer;
   z-index: 30;

@@ -1,4 +1,5 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input, ViewChild } from '@angular/core';
+import { burgerService } from 'src/app/header/burger.service';
 
 
 @Component({
@@ -7,14 +8,20 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./bugrer-menu.component.scss']
 })
 export class BugrerMenuComponent implements OnInit {
-  toggle: boolean = false
-  constructor() { }
+  toggle: boolean = false;
+  @ViewChild('burger') burger
+  constructor(private burgerService :burgerService) { }
 
 
   @Output() toggleMenu = new EventEmitter<boolean>()
 
 
   ngOnInit(): void {
+    this.burgerService.toggle.subscribe(()=>{
+      this.burger.nativeElement.checked= false
+     this.onToggleMenu()
+
+    })
   }
   onToggleMenu(){
     this.toggle = !this.toggle

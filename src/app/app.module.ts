@@ -20,6 +20,7 @@ import { OurProjectsComponent } from './our-projects/our-projects.component';
 import { BugrerMenuComponent } from './UI/bugrer-menu/bugrer-menu.component';
 import {MobNavComponent} from './home/mob-nav/mob-nav.component';
 import { NavImagesComponent } from './home/mob-nav/nav-images/nav-images.component'
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,7 @@ import { NavImagesComponent } from './home/mob-nav/nav-images/nav-images.compone
     MobNavComponent,
     NavImagesComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule,  FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -14,6 +14,9 @@
     @media only screen and (max-width: 750px){
       margin-bottom: 50px;
     }
+    @media only screen and (max-width: 550px){
+      font-size: 22px;
+    }
   }
 }
 .video {
@@ -48,6 +51,10 @@
             &__p{
             @media only screen and (max-width: 750px){
             margin-bottom: 30px;
+                   }
+            @media only screen and (max-width: 550px){
+            margin-bottom: 30px;
+            font-size: 14px;
                    }
     }
 

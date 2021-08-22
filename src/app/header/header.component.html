@@ -54,6 +54,6 @@
 
     </nav>
   </div>
-  <div class="nav__overlay" [ngClass]="{'nav__overlay__show': toggle }" ></div>
-  <app-mob-nav [show]="toggle" ></app-mob-nav>
+  <div class="nav__overlay"  (click)="onOverlayClicked()" [ngClass]="{'nav__overlay__show': toggle }" ></div>
+  <app-mob-nav   [show]="toggle" ></app-mob-nav>
 </header>

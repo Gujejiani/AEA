@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { burgerService } from './burger.service';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   toggle: boolean
-  constructor() { }
+  constructor(private burgerService :burgerService) { }
 
   ngOnInit(): void {
   }
   onToggleMenu(toggle: boolean){
     this.toggle = toggle
+  }
+
+  onOverlayClicked(){
+    this.burgerService.checked()
   }
 }

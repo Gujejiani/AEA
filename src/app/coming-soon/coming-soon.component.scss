@@ -1,0 +1,40 @@
+.coming{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  &__info{
+    width: 250px;
+    height: 70px;
+    background-color: #7D86E9;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    margin-bottom: 200px;
+    &-soon{
+      font-size:  16px;
+      margin-top: 10px;
+    }
+    &-button{
+      padding: 5px 10px;
+      width: 50%;
+      align-self: flex-end;
+      margin-top: 10px;
+      border-radius: 10px;
+      background-color: #434ba9;
+      color: #fff;
+      cursor: pointer;
+      outline: none;
+      &:hover{
+        background-color: #636aba;
+      }
+    }
+  }
+
+}

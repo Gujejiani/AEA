@@ -14,6 +14,9 @@
   margin-top: 100px;
   display: flex;
   justify-content: space-between;
+  @media (min-width: 1890px) {
+    height: 70vh;
+  }
   &__title {
     font-weight: bold;
     font-size: 24px;
@@ -30,7 +33,7 @@
       bottom: -380px;
     }
     &__2 {
-      position: absolute;
+      margin-top: 200px;
       bottom: 120px;
       padding-left: 100px;
       width: 100%;
@@ -78,6 +81,9 @@
       bottom: -200px;
       z-index: 10;
       color: #52565e;
+      @media (max-width: 1390px) {
+
+      }
       &__description {
         margin-top: 40px;
       }
@@ -100,6 +106,7 @@
     line-height: 30px;
     margin-top: 40px;
     max-width: 550px;
+
   }
   &__img {
     position: absolute;

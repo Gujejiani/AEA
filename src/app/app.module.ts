@@ -21,6 +21,9 @@ import { BugrerMenuComponent } from './UI/bugrer-menu/bugrer-menu.component';
 import {MobNavComponent} from './home/mob-nav/mob-nav.component';
 import { NavImagesComponent } from './home/mob-nav/nav-images/nav-images.component'
 import { FormsModule } from '@angular/forms';
+import { OurProjectComponentt } from './our-project/our-project.component';
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,10 +40,12 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    OurProjectsComponent,
     BugrerMenuComponent,
     MobNavComponent,
-    NavImagesComponent
+    NavImagesComponent,
+    OurProjectsComponent,
+    OurProjectComponentt,
+    ComingSoonComponent
   ],
   imports: [BrowserModule, AppRoutingModule,  FormsModule],
   providers: [],

@@ -18,8 +18,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { OurProjectsComponent } from './our-projects/our-projects.component';
 import { BugrerMenuComponent } from './UI/bugrer-menu/bugrer-menu.component';
-import {MobNavComponent} from './home/mob-nav/mob-nav.component';
-import { NavImagesComponent } from './home/mob-nav/nav-images/nav-images.component'
+import { MobNavComponent } from './home/mob-nav/mob-nav.component';
+import { NavImagesComponent } from './home/mob-nav/nav-images/nav-images.component';
 import { FormsModule } from '@angular/forms';
 import { OurProjectComponentt } from './our-project/our-project.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
@@ -45,9 +45,9 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
     NavImagesComponent,
     OurProjectsComponent,
     OurProjectComponentt,
-    ComingSoonComponent
+    ComingSoonComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule,  FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

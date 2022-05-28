@@ -72,9 +72,9 @@
         color: #ffffff;
         font-size: 18px;
         &--active {
-          background-color: #7d86e9;
+          color: #7d86e9;
           border-radius: 4px;
-          color: #fff;
+          background-color: #fff;
           &:hover {
             &::after {
               display: none;

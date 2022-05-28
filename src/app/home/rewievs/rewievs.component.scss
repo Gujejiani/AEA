@@ -9,7 +9,7 @@
     color: #52565e;
     text-align: center;
     font-weight: bold;
-    @media only screen and (max-width: 550px){
+    @media only screen and (max-width: 550px) {
       font-size: 22px;
     }
   }
@@ -23,10 +23,9 @@
     justify-content: center;
     position: relative;
 
-
     max-width: 480px;
 
-   overflow: hidden;
+    overflow: hidden;
     height: 500px;
 
     &__view {
@@ -36,17 +35,17 @@
       position: absolute;
       left: 0;
       top: 0;
-      @media only screen and (max-width: 850px){
+      @media only screen and (max-width: 850px) {
         display: none;
-                }
+      }
     }
     &__right {
       position: absolute;
       right: 0;
       top: 0;
-      @media only screen and (max-width: 850px){
+      @media only screen and (max-width: 850px) {
         display: none;
-                }
+      }
     }
   }
 }
@@ -58,31 +57,31 @@
 .review__slider__main__left {
   position: absolute;
   left: -100px;
-  top: 335px;
+  top: 80px;
   cursor: pointer;
   z-index: 30;
-  @media only screen and (max-width: 750px){
-   top: 130px;
-   left: 30px;
-            }
+  // @media only screen and (max-width: 750px) {
+  //   top: 130px;
+  //   left: 30px;
+  // }
 
-    @media only screen and (max-width: 621px){
-         width: 40px;
-         left: -30px;
-      }
+  @media only screen and (max-width: 621px) {
+    width: 40px;
+    left: -30px;
+  }
 }
 .review__slider__main__right {
   position: absolute;
   right: -80px;
-  top: 335px;
+  top: 80px;
   cursor: pointer;
   z-index: 30;
-  @media only screen and (max-width: 750px){
-    top: 130px;
-    right: 30px;
-       }
-   @media only screen and (max-width: 621px){
-   width: 40px;
-   right: -30px;
-   }
+  // @media only screen and (max-width: 750px) {
+  //   top: 130px;
+  //   right: 30px;
+  // }
+  @media only screen and (max-width: 621px) {
+    width: 40px;
+    right: -30px;
+  }
 }

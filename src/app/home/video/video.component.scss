@@ -1,7 +1,7 @@
 .wrapper {
   margin-top: 150px;
   position: relative;
-  @media only screen and (max-width: 550px){
+  @media only screen and (max-width: 550px) {
     margin-top: 50px;
   }
   &__title {
@@ -11,10 +11,10 @@
     font-weight: bold;
     color: #52565e;
     margin-bottom: 100px;
-    @media only screen and (max-width: 750px){
+    @media only screen and (max-width: 750px) {
       margin-bottom: 50px;
     }
-    @media only screen and (max-width: 550px){
+    @media only screen and (max-width: 550px) {
       font-size: 22px;
     }
   }
@@ -23,14 +23,13 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    @media only screen and (max-width: 750px){
-     flex-direction: column;
-             }
+    @media only screen and (max-width: 750px) {
+      flex-direction: column;
+    }
   }
   &__description {
-    text-align: center;
     color: #52565e;
-    text-align: justify;
+    text-align: left;
     margin-bottom: 30px;
     font-size: 22px;
     color: #52565e;
@@ -38,26 +37,25 @@
     flex: 40%;
     line-height: 25px;
     padding-left: 0;
-    @media only screen and (max-width: 750px){
+    @media only screen and (max-width: 750px) {
       padding: 0;
       font-size: 20px;
-             }
-    &__text {
-      max-width: 350px;
-      @media only screen and (max-width: 750px){
-        max-width: 100%;
-               }
-
-            &__p{
-            @media only screen and (max-width: 750px){
-            margin-bottom: 30px;
-                   }
-            @media only screen and (max-width: 550px){
-            margin-bottom: 30px;
-            font-size: 14px;
-                   }
     }
+    &__text {
+      max-width: 480px;
+      @media only screen and (max-width: 750px) {
+        max-width: 100%;
+      }
 
+      &__p {
+        @media only screen and (max-width: 750px) {
+          margin-bottom: 30px;
+        }
+        @media only screen and (max-width: 550px) {
+          margin-bottom: 30px;
+          font-size: 14px;
+        }
+      }
     }
   }
   &__vid {
@@ -69,15 +67,15 @@
     flex: 55%;
 
     height: 400px;
-    &--web{
-      @media only screen and (max-width: 750px){
-       display: none;
-               }
-    }
-    &--mob{
-      @media only screen and (min-width: 750px){
+    &--web {
+      @media only screen and (max-width: 750px) {
         display: none;
-                }
+      }
+    }
+    &--mob {
+      @media only screen and (min-width: 750px) {
+        display: none;
+      }
     }
   }
 }

@@ -1,27 +1,23 @@
 <div class="item item--desktop">
   <img width="60px" [src]="src" alt="icon" class="item__img" />
-
+  <div class="item__middle">
     <h5 class="item__title">{{ title }}</h5>
-    <p class="item__text">
+    <p class="item__text item__text--desktop">
       {{ text }}
     </p>
-
+  </div>
 
   <button class="item__btn">Read more</button>
 </div>
 
-
 <div class="item item--mobile">
-  <img width="60px" [src]="src" alt="icon" class="item__img item__img--mob"  />
-    <div class="item__info">
-      <h5 class="item__title item__title--mob">{{ title }}</h5>
-      <p class="item__text item__text--mob">
-        {{ text }}
-      </p>
-
-    </div>
-
-
+  <img width="60px" [src]="src" alt="icon" class="item__img item__img--mob" />
+  <div class="item__info">
+    <h5 class="item__title item__title--mob">{{ title }}</h5>
+    <p class="item__text item__text--mob">
+      {{ text }}
+    </p>
+  </div>
 
   <button class="item__btn item__btn--mob">Read more</button>
 </div>

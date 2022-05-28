@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-what-we-do-item',
@@ -10,7 +11,12 @@ export class WhatWeDoItemComponent implements OnInit {
   @Input() title: string;
   @Input() text: string;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
+
+  readMoreClicked() {
+    this.router.navigate(['about']);
+    console.log('read more clicked');
+  }
 }

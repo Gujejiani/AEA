@@ -17,21 +17,32 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  &__burger{
-    @media only screen and (min-width: 1050px){
+  &__burger {
+    @media only screen and (min-width: 1050px) {
       display: none;
-       }
-       margin-right: 10px;
+    }
+    margin-right: 10px;
   }
   &__logo {
-    @media only screen and (max-width: 750px){
-      display: none;
+    display: flex;
+    align-items: center;
+    &-name {
+      color: rgb(244 136 35);
+      font-weight: bold;
+      margin-left: 10px;
+      font-size: 12px;
+      &--mobile {
+        @media only screen and (max-width: 750px) {
+          width: 50px;
+          font-size: 8px;
+        }
       }
-      &--mobile{
-        @media only screen and (min-width: 750px){
-          display: none;
-          }
+    }
+    &--mobile-logo {
+      @media only screen and (max-width: 750px) {
+        width: 35px;
       }
+    }
   }
 
   &__list {
@@ -39,9 +50,9 @@
     max-width: 600px;
     width: 100%;
     justify-content: space-between;
-     @media only screen and (max-width: 1050px){
-     display: none;
-     }
+    @media only screen and (max-width: 1050px) {
+      display: none;
+    }
 
     &__item {
       &__link {
@@ -83,12 +94,12 @@
     max-width: 100px;
     width: 100%;
     justify-content: space-between;
-    @media only screen and (max-width: 650px){
+    @media only screen and (max-width: 650px) {
       display: none;
-      }
+    }
   }
 
-  &__overlay{
+  &__overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -99,7 +110,7 @@
     visibility: hidden;
     transition: opacity 0.5s ease-in-out;
 
-    &__show{
+    &__show {
       visibility: visible;
       opacity: 0.2;
     }

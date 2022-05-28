@@ -4,60 +4,61 @@
   background-color: rgba(252, 222, 195, 0.2);
   padding: 50px;
   position: relative;
-  @media only screen and (max-width: 520px){
+  @media only screen and (max-width: 520px) {
     justify-content: center;
-      }
+  }
 
-  @media only screen and (max-width: 1050px){
+  @media only screen and (max-width: 1050px) {
     justify-content: space-around;
-
-    }
-  @media only screen and (max-width: 520px){
+  }
+  @media only screen and (max-width: 520px) {
     justify-content: flex-start;
-
-    }
+  }
 
   &__img {
     position: relative;
     z-index: -10;
-    @media only screen and (max-width: 750px){
-      display: none;
+    display: flex;
+    align-items: center;
+    &-name {
+      color: rgb(244 136 35);
+      font-weight: bold;
+      margin-left: 10px;
+      font-size: 12px;
+    }
+    @media only screen and (max-width: 750px) {
+      // display: none;
+    }
+    &--mobile {
+      @media only screen and (max-width: 520px) {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        right: 10px;
+        bottom: -4px;
       }
-      &--mobile{
-        @media only screen and (min-width: 750px){
-          display: none;
-          }
-          width: 200px;
-          @media only screen and (max-width: 520px){
-           position: absolute;
-           width: 150px;
-           height: 150px;
-           right: 10px;
-           bottom: -4px;
-
-
-              }
-          @media only screen and (max-width: 360px){
-
-           width: 100px;
-           height: 100px;
-
-            bottom: 15px;
-              }
-
+      @media only screen and (max-width: 360px) {
+        width: 100px;
+        height: 100px;
+        bottom: 15px;
       }
+    }
+    &--right {
+      @media only screen and (max-width: 750px) {
+        display: none;
+      }
+    }
   }
   &__contact {
     color: #52565e;
     font-size: 18px;
     font-weight: bold;
-    @media only screen and (max-width: 950px){
+    @media only screen and (max-width: 950px) {
       font-size: 16px;
-      }
-      @media only screen and (max-width: 620px){
-        font-size: 14px;
-
-          }
+    }
+    @media only screen and (max-width: 620px) {
+      font-size: 14px;
+    }
 
     li {
       margin-bottom: 20px;
@@ -83,19 +84,17 @@
 
 .nav {
   &__list {
-
     display: flex;
     flex-direction: column;
-    @media only screen and (max-width: 1050px){
-    display: none;
-      }
+    @media only screen and (max-width: 1050px) {
+      display: none;
+    }
     &__li {
       margin-bottom: 20px;
       &__link {
         color: #52565e;
         font-size: 18px;
         font-weight: bold;
-
       }
     }
   }

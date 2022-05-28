@@ -2,9 +2,17 @@
   <div class="header__container">
     <nav class="nav">
       <a href="#">
-        <img src="./assets/logo.svg" alt="Logo" class="nav__logo" />
-        <img class="nav__logo--mobile" src="./assets/mob_logo.svg" alt="logo">
-    </a>
+        <div class="nav__logo">
+          <img
+            src="./assets/logoOnly.svg"
+            alt="Logo"
+            class="nav__logo nav__logo--mobile-logo"
+          />
+          <span class="nav__logo-name nav__logo-name--mobile"
+            >Alternative Education Academy</span
+          >
+        </div>
+      </a>
 
       <ul class="nav__list">
         <li class="nav__list__item">
@@ -33,17 +41,24 @@
           >
         </li>
         <li class="nav__list__item">
-          <a  routerLink="youthRoom"
-           routerLinkActive="nav__list__item__link--active" class="nav__list__item__link">Youth Room</a>
+          <a
+            routerLink="youthRoom"
+            routerLinkActive="nav__list__item__link--active"
+            class="nav__list__item__link"
+            >Youth Room</a
+          >
         </li>
         <li class="nav__list__item">
-          <a routerLink="events"
-          routerLinkActive="nav__list__item__link--active" class="nav__list__item__link">Events</a>
+          <a
+            routerLink="events"
+            routerLinkActive="nav__list__item__link--active"
+            class="nav__list__item__link"
+            >Events</a
+          >
         </li>
       </ul>
 
       <div class="nav__icons">
-
         <a href="#"> <img src="./assets/icons8-whatsapp.svg" alt="whatap" /></a>
         <a target="_blank" href="https://www.facebook.com/Altereduacademy">
           <img src="./assets/icons8-facebook.svg" alt="facebook"
@@ -52,10 +67,16 @@
           <img src="./assets/icons8-instagram.svg" alt="instagram"
         /></a>
       </div>
-      <app-burger-menu (toggleMenu)="onToggleMenu($event)" class="nav__burger" ></app-burger-menu>
-
+      <app-burger-menu
+        (toggleMenu)="onToggleMenu($event)"
+        class="nav__burger"
+      ></app-burger-menu>
     </nav>
   </div>
-  <div class="nav__overlay"  (click)="onOverlayClicked()" [ngClass]="{'nav__overlay__show': toggle }" ></div>
-  <app-mob-nav   [show]="toggle" ></app-mob-nav>
+  <div
+    class="nav__overlay"
+    (click)="onOverlayClicked()"
+    [ngClass]="{ nav__overlay__show: toggle }"
+  ></div>
+  <app-mob-nav [show]="toggle"></app-mob-nav>
 </header>

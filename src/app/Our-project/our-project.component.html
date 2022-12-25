@@ -1,5 +1,42 @@
 <div class="wrapper">
+
+
+  <ng-container *ngFor="let projectKey of projectKeys"  >
+    <div class="about">
+
+    <div class="about__left">
+      <h3 class="about__left__title">{{projects[projectKey]?.title}}</h3>
+      <p class="about__left__about-us">
+        <span class="about__left__about-us__part-1">
+          {{projects[projectKey]?.text1}}
+        </span>
+        <span class="about__left__about-us__part-2">
+          {{projects[projectKey]?.text2}}
+        </span>
+      </p>
+    </div>
+    <div class="about__right">
+      <img
+        [src]="projects[projectKey]?.imageUrl"
+        alt="about-img"
+        class="about__right__img"
+      />
+    </div>
+  </div>
+  </ng-container>
+
+
+
+
+
+
+
+
+
+
   <div class="about">
+
+
     <div class="about__left">
       <h3 class="about__left__title">FEEL</h3>
       <p class="about__left__about-us">

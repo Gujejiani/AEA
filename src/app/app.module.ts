@@ -23,6 +23,8 @@ import { NavImagesComponent } from './home/mob-nav/nav-images/nav-images.compone
 import { FormsModule } from '@angular/forms';
 import { OurProjectComponentt } from './our-project/our-project.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+import { AdmProjectComponent } from './adm-project/adm-project.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -46,8 +48,9 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
     OurProjectsComponent,
     OurProjectComponentt,
     ComingSoonComponent,
+    AdmProjectComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

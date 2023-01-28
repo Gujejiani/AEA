@@ -16,12 +16,11 @@ import { PartnerComponent } from './home/partners/partner/partner.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { OurProjectsComponent } from './our-projects/our-projects.component';
 import { BugrerMenuComponent } from './UI/bugrer-menu/bugrer-menu.component';
 import { MobNavComponent } from './home/mob-nav/mob-nav.component';
 import { NavImagesComponent } from './home/mob-nav/nav-images/nav-images.component';
 import { FormsModule } from '@angular/forms';
-import { OurProjectComponentt } from './our-project/our-project.component';
+import { OurProjectComponent } from './our-project/our-project.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { AdmProjectComponent } from './adm-project/adm-project.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -45,8 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
     BugrerMenuComponent,
     MobNavComponent,
     NavImagesComponent,
-    OurProjectsComponent,
-    OurProjectComponentt,
+    OurProjectComponent,
     ComingSoonComponent,
     AdmProjectComponent
   ],

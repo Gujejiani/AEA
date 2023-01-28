@@ -1,10 +1,10 @@
 <div class="wrapper">
 
 
-  <ng-container *ngFor="let projectKey of projectKeys"  >
-    <div class="about">
+  <ng-container *ngFor="let projectKey of projectKeys; let i =index"  >
+    <div *ngIf="(i  + 2) % 2 !==0" class="about received">
 
-    <div class="about__left">
+    <div class="about__left ">
       <h3 class="about__left__title">{{projects[projectKey]?.title}}</h3>
       <p class="about__left__about-us">
         <span class="about__left__about-us__part-1">
@@ -19,8 +19,31 @@
       <img
         [src]="projects[projectKey]?.imageUrl"
         alt="about-img"
+        style="max-height: 380px;"
         class="about__right__img"
       />
+    </div>
+  </div>
+
+
+  <div *ngIf="(i  + 2)% 2 ===0" class="about-2 received">
+    <div class="about-2__left">
+      <img
+        [src]="projects[projectKey]?.imageUrl"
+        alt="about-img"
+        class="about-2__left-img"
+      />
+    </div>
+    <div class="about-2__right about-2__right__received" >
+      <h3 class="about__left__title about-2__right__received__title">{{projects[projectKey]?.title}} </h3>
+      <p class="about-2__right__about-us">
+        <span class="about-2__right__about-us__part-1">
+          {{projects[projectKey]?.text1}}</span
+        >
+        <span class="about-2__right__about-us__part-2">
+          {{projects[projectKey]?.text2}}</span
+        >
+      </p>
     </div>
   </div>
   </ng-container>
@@ -129,43 +152,4 @@
 
   <!-- 4END -->
 
-  <!-- <div class="about__2">
-    <div class="about__2__left">
-      <h3 class="about__left__title">Tsalka Educational Meeting</h3>
-      <p class="about__2__left__about-us">
-        AEA promotes European Citizenship and intercultural learning among
-        Georgian youngsters. We want to support cultural cooperation between the
-        EU and Georgia and promote its fundamental principles. The concepts such
-        as respect the national identities and culture, freedom of expression,
-        solidarity.
-      </p>
-    </div>
-    <div class="about__2__right">
-      <img
-        src="./assets/projects/project-3.jpg"
-        alt="about-img"
-        class="about__2__right__img"
-      />
-    </div>
-  </div>
-
-
-
-  <div class="about__2">
-    <div class="about__2__left about__2__left--sec">
-      <img
-      src="./assets/projects/project-4.jpg"
-        alt="about-img"
-        class="about__2__right__img"
-      />
-    </div>
-    <div class="about__2__right">
-      <p class="about__2__left__about-us about__2__right__about-us">
-        Our mission is to support local juniors with fewer opportunities and IDP
-        kids through various exercises such as after school non-formal
-        educational activities. Using the non-formal methodology, we keep a
-        positive spirit in the youth and volunteering field.
-      </p>
-    </div>
-  </div> -->
 </div>

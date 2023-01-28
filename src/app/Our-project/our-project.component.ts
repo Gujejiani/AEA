@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ProjectData, projectsService } from '../shared/projects.service';
 
 @Component({
@@ -6,9 +7,10 @@ import { ProjectData, projectsService } from '../shared/projects.service';
   templateUrl: './our-project.component.html',
   styleUrls: ['./our-project.component.scss']
 })
-export class OurProjectComponent implements OnInit {
+export class OurProjectComponent implements OnInit, OnDestroy {
   projects: ProjectData
   projectKeys: string[]
+  private subscription: Subscription
   constructor(private projectService: projectsService) { }
 
   ngOnInit(): void {
@@ -17,8 +19,23 @@ export class OurProjectComponent implements OnInit {
 
 
     this.projects = this.projectService.getProjects()
-    this.projectKeys = Object.keys(this.projects)
+    if(this.projects){
+      this.projectKeys = Object.keys(this.projects)
+
+    }
+
+    if(!this.projects){
+      this.subscription=  this.projectService.projectsData$.subscribe(projects=>{
+        this.projects = projects
+        if(this.projects){
+          this.projectKeys = Object.keys(this.projects)
+        }
+      })
+    }
     console.log(this.projects)
   }
 
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe()
+  }
 }

@@ -1,5 +1,7 @@
 <div class="wrapper">
 
+<ng-container *ngIf="projectKeys?.length">
+
 
   <ng-container *ngFor="let projectKey of projectKeys?.reverse(); let i =index"  >
     <div *ngIf="(i  + 2) % 2 !==0" class="about received">
@@ -50,7 +52,7 @@
 
 
 
-
+</ng-container>
 
 
 

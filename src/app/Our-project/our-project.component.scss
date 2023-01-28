@@ -127,10 +127,11 @@
      &__received{
       margin-top: 0;
       &__title{
-
+        margin-bottom: 20px;
         margin-left: 30px;
         @media screen and (max-width: 590px) {
           margin-left: 0;
+          margin-bottom: 20px;
         }
        }
      }

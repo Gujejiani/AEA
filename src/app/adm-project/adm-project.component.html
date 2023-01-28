@@ -1,0 +1,30 @@
+
+<form (ngSubmit)="onSubmit(form)" #form="ngForm"  class="container" style="margin-top: 200px;">
+
+
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Project Title</label>
+    <input ngModel name="title"  type="text" class="form-control" id="exampleFormControlInput1" placeholder="title">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Text part 1</label>
+    <textarea ngModel name="text1" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Text part 2</label>
+    <textarea ngModel name="text2" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Project picture</label>
+    <input (change)="processImage(image)" #image ngModel name="photo" type="file" class="form-control " id="exampleFormControlTextarea1" rows="3"/>
+  </div>
+  <button type="submit" class="btn btn-primary" >Add Project</button>
+</form>
+
+<ul class="list-group container" style="margin-top: 20px; margin-bottom: 40px;">
+  <li *ngFor="let projectKey of projectKeys; let i =index" class="list-group-item flx">{{projects[projectKey]?.title}}
+    <button (click)="onDelete(projectKey)" type="button" class="btn btn-danger">DELETE</button>
+
+  </li>
+
+</ul>

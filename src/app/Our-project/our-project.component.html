@@ -1,7 +1,7 @@
 <div class="wrapper">
 
 
-  <ng-container *ngFor="let projectKey of projectKeys; let i =index"  >
+  <ng-container *ngFor="let projectKey of projectKeys?.reverse(); let i =index"  >
     <div *ngIf="(i  + 2) % 2 !==0" class="about received">
 
     <div class="about__left ">

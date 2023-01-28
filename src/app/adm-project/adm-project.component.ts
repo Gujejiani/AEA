@@ -2,9 +2,7 @@ import { ProjectData, projectsService } from './../shared/projects.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import {getStorage, ref, uploadBytes} from 'firebase/storage'
+import { ref, uploadBytes} from 'firebase/storage'
 import { storage } from '../shared/storage';
 import { Subscription } from 'rxjs';
 @Component({
@@ -15,6 +13,7 @@ import { Subscription } from 'rxjs';
 export class AdmProjectComponent implements OnInit, OnDestroy {
   projects: ProjectData
   projectKeys: string[]
+  loading: boolean
   private subscription: Subscription
 
   constructor(private http: HttpClient, private projectService: projectsService ) { }
@@ -62,12 +61,19 @@ export class AdmProjectComponent implements OnInit, OnDestroy {
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
   onSubmit(form: NgForm){
-    this.uploadImage(form.form.value.title)
-    console.log(form.form.value)
+    if(!this.loading){
 
-   this.http.post('https://healthcontrol-76123.firebaseio.com/projects.json', {title: form.form.value.title, text1: form.form.value?.text1, text2: form.form.value?.text2}).subscribe(res=>{
-      console.log(res)
-    })
+      this.loading =true
+      this.uploadImage(form.form.value.title)
+      console.log(form.form.value)
+
+     this.http.post('https://healthcontrol-76123.firebaseio.com/projects.json', {title: form.form.value.title, text1: form.form.value?.text1, text2: form.form.value?.text2}).subscribe(res=>{
+        console.log(res)
+        this.loading =false
+        form.reset()
+      })
+
+    }
 
   }
   uploadImage(title: string){
@@ -80,10 +86,24 @@ export class AdmProjectComponent implements OnInit, OnDestroy {
   }
 
   onDelete(key: string){
-    console.log('delete :', key)
+    this.http.delete(`https://healthcontrol-76123.firebaseio.com/projects/${key}.json`) .subscribe(
+      (response) => {
+        console.log(response)
+        console.log('Item deleted successfully');
+        this.projectService.startFetchingProjects()
+      },
+      (error) => {
+        console.log(error)
+        console.log('Error deleting item:', error);
+      }
+    );
+
   }
 
   ngOnDestroy(): void {
-    this.subscription.unsubscribe()
+    if(this.subscription){
+
+      this.subscription.unsubscribe()
+    }
   }
 }

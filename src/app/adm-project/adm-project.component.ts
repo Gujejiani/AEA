@@ -14,6 +14,7 @@ export class AdmProjectComponent implements OnInit, OnDestroy {
   projects: ProjectData
   projectKeys: string[] = []
   loading: boolean
+  deleteLoading: boolean
   private subscription: Subscription
 
   constructor(private http: HttpClient, private projectService: projectsService ) { }
@@ -89,11 +90,13 @@ export class AdmProjectComponent implements OnInit, OnDestroy {
   }
 
   onDelete(key: string){
+    this.deleteLoading=true
     this.http.delete(`https://healthcontrol-76123.firebaseio.com/projects/${key}.json`) .subscribe(
       (response) => {
         console.log(response)
         console.log('Item deleted successfully');
         this.projectService.startFetchingProjects()
+        this.deleteLoading =false
       },
       (error) => {
         console.log(error)

@@ -12,7 +12,7 @@ import { Subscription } from 'rxjs';
 })
 export class AdmProjectComponent implements OnInit, OnDestroy {
   projects: ProjectData
-  projectKeys: string[]
+  projectKeys: string[] = []
   loading: boolean
   private subscription: Subscription
 
@@ -40,6 +40,8 @@ export class AdmProjectComponent implements OnInit, OnDestroy {
     if(projectsData){
       this.projects = projectsData
       this.projectKeys = Object.keys(projectsData)
+    }else {
+      this.projectKeys =[]
     }
 
   }
@@ -71,6 +73,7 @@ export class AdmProjectComponent implements OnInit, OnDestroy {
         console.log(res)
         this.loading =false
         form.reset()
+        this.projectService.startFetchingProjects()
       })
 
     }

@@ -47,18 +47,21 @@ export class projectsService {
       listAll(this.imageRef).then(res=>{
 
         try{
-          res.items.forEach(item=>{
-
-            Object.keys(projectData).forEach(key=>{
+          res?.items.forEach(item=>{
+          if(projectData){
+            Object.keys(projectData)?.forEach(key=>{
               if(projectData[key].title === item.name){
                 getDownloadURL(item).then(url=>{
                   projectData[key] = {...projectData[key], imageUrl: url}
-                 console.log(url,'url added')
+                console.log(url,'url added')
                 })
 
               }
 
             })
+
+          }
+
 
 
 

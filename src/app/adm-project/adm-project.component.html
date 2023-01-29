@@ -22,9 +22,10 @@
 </form>
 <h3 style="text-align: center;margin-bottom: 30px;" >DELETE PROJECT</h3>
 <ul class="list-group container" style="margin-top: 20px; margin-bottom: 40px;">
-  <li *ngFor="let projectKey of projectKeys; let i =index" class="list-group-item flx">{{projects[projectKey]?.title}}
+  <ng-container *ngIf="projects" >
+  <li *ngFor="let projectKey of projectKeys; let i =index" class="list-group-item flx">{{projectKey && projects? projects[projectKey]?.title: ''}}
     <button (click)="onDelete(projectKey)" type="button" class="btn btn-danger">DELETE</button>
 
   </li>
-
+</ng-container>
 </ul>

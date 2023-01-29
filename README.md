@@ -28,7 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## DEPLOY
-ng build --prod --base-href "https://Gujejiani.github.io/AEA/"
+ng build --prod --base-href "https://www.altereduacademy.ge/"
 
 ngh --dir dist/AEA
 

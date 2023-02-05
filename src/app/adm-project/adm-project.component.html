@@ -1,31 +1,87 @@
+<form
+  (ngSubmit)="onSubmit(form)"
+  #form="ngForm"
+  class="container"
+  style="margin-top: 200px; margin-bottom: 40px"
+>
+  <h3 style="text-align: center; margin-bottom: 30px">CREATE PROJECT</h3>
 
-<form (ngSubmit)="onSubmit(form)" #form="ngForm"  class="container" style="margin-top: 200px; margin-bottom: 40px;">
-  <h3 style="text-align: center;margin-bottom: 30px;" >CREATE PROJECT</h3>
-
-<div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Project Title</label>
-    <input ngModel name="title" required="true" type="text" class="form-control" id="exampleFormControlInput1" placeholder="title">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label"
+      >Project Title</label
+    >
+    <input
+      ngModel
+      name="title"
+      required="true"
+      type="text"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="title"
+    />
   </div>
   <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Text part 1</label>
-    <textarea required="true" ngModel name="text1" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="exampleFormControlTextarea1" class="form-label"
+      >Text part 1</label
+    >
+    <textarea
+      required="true"
+      ngModel
+      name="text1"
+      class="form-control"
+      id="exampleFormControlTextarea1"
+      rows="3"
+    ></textarea>
   </div>
   <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Text part 2</label>
-    <textarea required="true" required="true" ngModel name="text2" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="exampleFormControlTextarea1" class="form-label"
+      >Text part 2</label
+    >
+    <textarea
+      required="true"
+      required="true"
+      ngModel
+      name="text2"
+      class="form-control"
+      id="exampleFormControlTextarea1"
+      rows="3"
+    ></textarea>
   </div>
   <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Project picture</label>
-    <input (change)="processImage(image)"  required="true"#image ngModel name="photo" type="file" class="form-control " id="exampleFormControlTextarea1" rows="3"/>
+    <label for="exampleFormControlTextarea1" class="form-label"
+      >Project picture</label
+    >
+    <input
+      (change)="processImage(image)"
+      required="true"
+      #image
+      ngModel
+      name="photo"
+      type="file"
+      class="form-control"
+      id="exampleFormControlTextarea1"
+      rows="3"
+    />
   </div>
-  <button type="submit" [disabled]="!form.valid" class="btn btn-primary" >{{!loading? 'Add Project': 'Loading...'}}</button>
+  <button type="submit" [disabled]="!form.valid" class="btn btn-primary">
+    {{ !loading ? "Add Project" : "Loading..." }}
+  </button>
 </form>
-<h3 *ngIf="projects" style="text-align: center;margin-bottom: 30px;" >DELETE PROJECT</h3>
-<ul *ngIf="projects" class="list-group container" style="margin-top: 20px; margin-bottom: 40px;">
-
-  <li *ngFor="let projectKey of projectKeys; let i =index" class="list-group-item flx">{{projectKey && projects? projects[projectKey]?.title: ''}}
-    <button (click)="onDelete(projectKey)" type="button" class="btn btn-danger">{{!deleteLoading?'DELETE': 'Loading...'}}</button>
-
+<h3 *ngIf="projects" style="text-align: center; margin-bottom: 30px">
+  DELETE PROJECT
+</h3>
+<ul
+  *ngIf="projects"
+  class="list-group container"
+  style="margin-top: 20px; margin-bottom: 40px"
+>
+  <li
+    *ngFor="let projectKey of projectKeys; let i = index"
+    class="list-group-item flx"
+  >
+    {{ projectKey && projects ? projects[projectKey]?.title : "" }}
+    <button (click)="onDelete(projectKey)" type="button" class="btn btn-danger">
+      {{ !deleteLoading ? "DELETE" : "Loading..." }}
+    </button>
   </li>
-
 </ul>

@@ -4,7 +4,7 @@
 
 
   <ng-container *ngFor="let projectKey of projectKeys?.reverse(); let i =index"  >
-    <div *ngIf="(i  + 2) % 2 !==0" class="about received">
+    <div *ngIf="showLeft(i)" class="about received">
 
     <div class="about__left ">
       <h3 class="about__left__title">{{projects[projectKey]?.title}}</h3>
@@ -28,7 +28,7 @@
   </div>
 
 
-  <div *ngIf="(i  + 2)% 2 ===0" class="about-2 received">
+  <div *ngIf="showRight(i)" class="about-2 received">
     <div class="about-2__left">
       <img
         [src]="projects[projectKey]?.imageUrl"

@@ -35,6 +35,20 @@ export class OurProjectComponent implements OnInit, OnDestroy {
     console.log(this.projects)
   }
 
+  showLeft(i: number){
+    if((this.projectKeys.length % 2) ===0){
+      return (i  + 2) % 2 ===0
+    }
+    return (i  + 2) % 2 !==0
+  }
+
+  showRight(i: number){
+    if((this.projectKeys.length % 2) ===0){
+      return (i  + 2) % 2 !==0
+    }
+    return (i  + 2) % 2 ===0
+  }
+
   ngOnDestroy(): void {
     if(this.subscription){
 

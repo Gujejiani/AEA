@@ -55,4 +55,8 @@ export class OurProjectComponent implements OnInit, OnDestroy {
       this.subscription.unsubscribe()
     }
   }
+
+   trackBy(_index, key) {
+    return key;
+  }
 }

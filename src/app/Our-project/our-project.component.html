@@ -3,7 +3,7 @@
 <ng-container *ngIf="projectKeys?.length">
 
 
-  <ng-container *ngFor="let projectKey of projectKeys?.reverse(); let i =index"  >
+  <ng-container *ngFor="let projectKey of projectKeys?.reverse(); let i =index; trackBy: trackBy"  >
     <div *ngIf="showLeft(i)" class="about received">
 
     <div class="about__left ">
@@ -18,31 +18,9 @@
       </p>
     </div>
     <div class="about__right animated-2">
-      <!-- <div class="animated"></div>
-      <img
-        [src]="projects[projectKey]?.imageUrl"
-        alt="about-img"
-        style="max-height: 380px;"
-        class="about__right__img"
-        [imageLoad]="imageIsLoaded"
-        (load)="imageLoaded()"
 
-      /> -->
       <app-image  class="about__right__img" [src]="projects[projectKey]?.imageUrl" ></app-image>
-      <!-- <app-image  class="about__right__img" >
-        <img
-        [src]="projects[projectKey]?.imageUrl"
-        alt="about-img"
-        style="max-height: 380px;"
-        class="about__right__img"
-        [imageLoad]="imageIsLoaded"
-        (load)="imageLoaded()"
 
-      />
-
-
-
-      </app-image> -->
 
     </div>
   </div>
@@ -51,26 +29,7 @@
   <div *ngIf="showRight(i)" class="about-2 received">
     <div class="about-2__left animated-2">
       <app-image class="about-2__left-img" [className]="'about-2__left-img'" [src]="projects[projectKey]?.imageUrl" ></app-image>
-      <!-- <div class="animated"></div> -->
-      <!-- <img
-        [src]="projects[projectKey]?.imageUrl"
-        alt="about-img"
-        class="about-2__left-img "
-      /> -->
-      <!-- <app-image  class="about-2__left-img" >
-        <img
-        [src]="projects[projectKey]?.imageUrl"
-        alt="about-img"
-        style="max-height: 380px;"
-        class="about__right__img"
-        [imageLoad]="imageIsLoaded"
-        (load)="imageLoaded()"
 
-      />
-
-
-
-      </app-image> -->
     </div>
     <div class="about-2__right about-2__right__received" >
       <h3 class="about__left__title about-2__right__received__title">{{projects[projectKey]?.title}} </h3>

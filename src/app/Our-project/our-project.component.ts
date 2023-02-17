@@ -56,7 +56,8 @@ export class OurProjectComponent implements OnInit, OnDestroy {
     }
   }
 
-   trackBy(_index, key) {
-    return key;
+  trackByIndex(index: number, item: any) {
+
+    return index;
   }
 }

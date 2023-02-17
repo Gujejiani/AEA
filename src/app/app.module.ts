@@ -24,6 +24,8 @@ import { OurProjectComponent } from './our-project/our-project.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { AdmProjectComponent } from './adm-project/adm-project.component';
 import { HttpClientModule } from '@angular/common/http';
+import { imageLoadDirective } from './directive/imageLoad.directive';
+import { ImageComponent } from './shared/image/image.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { HttpClientModule } from '@angular/common/http';
     NavImagesComponent,
     OurProjectComponent,
     ComingSoonComponent,
-    AdmProjectComponent
+    AdmProjectComponent,
+    imageLoadDirective,
+    ImageComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

@@ -1,0 +1,20 @@
+
+
+<img
+      [ngClass]="{'image-loading': !imageLoaded}"
+
+        [src]="src"
+        alt="about-img"
+        style="max-height: 380px; width: 100%; height: 100%;"
+        (load)="onImageLoad()"
+        (error)="onImageError()"
+
+       />
+
+
+
+
+        <div *ngIf="!imageLoaded" class="animated"></div>
+
+
+

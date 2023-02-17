@@ -53,7 +53,7 @@ export class projectsService {
               if(projectData[key].title === item.name){
                 getDownloadURL(item).then(url=>{
                   projectData[key] = {...projectData[key], imageUrl: url}
-                console.log(url,'url added')
+                // console.log(url,'url added')
                 })
 
               }

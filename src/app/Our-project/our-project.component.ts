@@ -1,11 +1,12 @@
 import { Subscription } from 'rxjs';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy, Input } from '@angular/core';
 import { ProjectData, projectsService } from '../shared/projects.service';
 
 @Component({
   selector: 'app-our-project',
   templateUrl: './our-project.component.html',
-  styleUrls: ['./our-project.component.scss']
+  styleUrls: ['./our-project.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class OurProjectComponent implements OnInit, OnDestroy {
   projects: ProjectData
@@ -20,15 +21,14 @@ export class OurProjectComponent implements OnInit, OnDestroy {
 
     this.projects = this.projectService.getProjects()
     if(this.projects){
-      this.projectKeys = Object.keys(this.projects)
+      this.projectKeys = Object.keys(this.projects).reverse()
 
     }
-
     if(!this.projects){
       this.subscription=  this.projectService.projectsData$.subscribe(projects=>{
         this.projects = projects
         if(this.projects){
-          this.projectKeys = Object.keys(this.projects)
+          this.projectKeys = Object.keys(this.projects)?.reverse()
         }
       })
     }
@@ -57,7 +57,6 @@ export class OurProjectComponent implements OnInit, OnDestroy {
   }
 
   trackByIndex(index: number, item: any) {
-
     return index;
   }
 }

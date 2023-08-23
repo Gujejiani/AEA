@@ -1,10 +1,28 @@
-<div class="wrapper">
-  <app-welcome></app-welcome>
-  <app-what-we-do></app-what-we-do>
+<div   class="wrapper">
+
+
+    <app-welcome visible (onVisible)="welcomeIsVisible()"   class="hide" [ngClass]="{'show': welcomeVisible}" ></app-welcome>
+
+  
+    <app-what-we-do  class="hide" visible [ngClass]="{'show': whatWeDoVisible}" (onVisible)="whatWeDoIsVisible()"  ></app-what-we-do>
+
+
+
 </div>
-<app-projects></app-projects>
+
+  <app-projects visible  class="hide" [ngClass]="{'show': projectsVisible}"  (onVisible)="projectsIsVisible()"   ></app-projects>
+
+
+
 <div class="wrapper">
-  <app-video></app-video>
-  <app-reviews></app-reviews>
-  <app-partners></app-partners>
+  <div  visible (onVisible)="videoIsVisible()"  >
+  <app-video  class="hide" [ngClass]="{'show': isVisible}"     ></app-video>
+</div>
+  <div  visible (onVisible)="reviewIsVisible()"  >
+    <app-reviews  class="hide" [ngClass]="{'show': reviewVisible}"    ></app-reviews>
+  </div>
+  <div visible (onVisible)="partnerIsVisible()"   >
+    <app-partners class="hide" [ngClass]="{'show': partnerVisible}" ></app-partners>
+  </div>
+
 </div>

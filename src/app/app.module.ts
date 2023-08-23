@@ -24,9 +24,11 @@ import { OurProjectComponent } from './our-project/our-project.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { AdmProjectComponent } from './adm-project/adm-project.component';
 import { HttpClientModule } from '@angular/common/http';
-import { imageLoadDirective } from './directive/imageLoad.directive';
+import { imageLoadDirective } from './directives/imageLoad.directive';
 import { ImageComponent } from './shared/image/image.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { VisibleDirective } from './directives/visible.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -51,9 +53,10 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     ComingSoonComponent,
     AdmProjectComponent,
     imageLoadDirective,
-    ImageComponent
+    ImageComponent,
+    VisibleDirective
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ServiceWorkerModule.register('ngsw-worker.js', {
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, FormsModule, HttpClientModule, ServiceWorkerModule.register('ngsw-worker.js', {
   enabled: !isDevMode(),
   // Register the ServiceWorker as soon as the application is stable
   // or after 30 seconds (whichever comes first).

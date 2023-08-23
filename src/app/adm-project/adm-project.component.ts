@@ -49,7 +49,7 @@ export class AdmProjectComponent implements OnInit, OnDestroy {
 
   processImage(image: any) {
     if (image?.files?.length) {
-      console.log('image added');
+
       this.image = image.files[0];
     }
   }

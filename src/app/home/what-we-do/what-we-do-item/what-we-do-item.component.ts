@@ -17,6 +17,6 @@ export class WhatWeDoItemComponent implements OnInit {
 
   readMoreClicked() {
     this.router.navigate(['about']);
-    console.log('read more clicked');
+
   }
 }

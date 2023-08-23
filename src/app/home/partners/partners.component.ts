@@ -91,7 +91,7 @@ export class PartnersComponent implements OnInit, AfterViewInit {
   }
   showPrevious() {
     this.moveSlider('left');
-    console.log('left');
+
   }
   showNext() {
     this.moveSlider('right');
@@ -110,14 +110,14 @@ export class PartnersComponent implements OnInit, AfterViewInit {
     }
     if (side === 'left') {
       if (this.currentSlide === 0) {
-        console.log('dadada');
+
         this.currentSlide = maxSlides - 3;
       } else {
         this.currentSlide--;
       }
       this.goToSlide(this.currentSlide);
     }
-    console.log(this.currentSlide);
+
   }
 
   goToSlide(slideIndex: number) {

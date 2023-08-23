@@ -32,7 +32,7 @@ export class OurProjectComponent implements OnInit, OnDestroy {
         }
       })
     }
-    console.log(this.projects)
+
   }
 
   showLeft(i: number){

@@ -43,7 +43,7 @@ export class RewievsComponent implements OnInit, AfterViewInit {
     },
   ];
   showPrevious() {
-    console.log('previous');
+
     this.moveSlider('left');
   }
   showNext() {
@@ -63,7 +63,7 @@ export class RewievsComponent implements OnInit, AfterViewInit {
     }
     if (side === 'left') {
       if (this.currentSlide === 0) {
-        console.log('dadada');
+
         this.currentSlide = maxSlides - 1;
       } else {
         this.currentSlide--;

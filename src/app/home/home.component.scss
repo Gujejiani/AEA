@@ -6,5 +6,19 @@
     padding: 0 50px;
 
     width:100%;
-    }
+  }
+
+    
+}
+.hide {
+  visibility: hidden;
+  transition: all ease-in-out 4s;
+  opacity: 0;
+
+}
+
+.show{
+  visibility: visible;
+  opacity: 1;
+ 
 }

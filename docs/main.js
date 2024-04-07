@@ -446,7 +446,7 @@ class AppComponent {
     this.imageRef = (0,firebase_storage__WEBPACK_IMPORTED_MODULE_0__.ref)(_shared_storage__WEBPACK_IMPORTED_MODULE_1__.storage, 'projects/');
   }
   ngOnInit() {
-    console.log('Angular 16 is running!');
+    console.log('Angular 16 is running! woohoo!');
     this.projectService.startFetchingProjects();
   }
   ngOnDestroy() {

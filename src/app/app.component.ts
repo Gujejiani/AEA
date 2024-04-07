@@ -13,7 +13,7 @@ export class AppComponent  implements OnInit, OnDestroy{
   imageRef = ref(storage, 'projects/')
   constructor(private http: HttpClient, private projectService: projectsService){}
   ngOnInit(){
-
+    console.log('Angular 16 is running!')
      this.projectService.startFetchingProjects()
 
   }

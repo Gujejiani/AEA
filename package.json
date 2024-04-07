@@ -7,7 +7,7 @@
     "build:prod": "ng build --configuration production --base-href 'https://www.altereduacademy.ge/'",
     "build:http-server": "ng build --configuration production",
     "build:github": "ng build --configuration production --base-href 'https://Gujejiani.github.io/AEA/'",
-    "deploy": "ngh --dir dist/AEA ",
+    "deploy": "ngh --dir=dist/AEA ",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

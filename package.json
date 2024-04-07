@@ -8,6 +8,7 @@
     "build:http-server": "ng build --configuration production",
     "build:github": "ng build --configuration production --base-href 'https://Gujejiani.github.io/AEA/'",
     "deploy": "ngh --dir=dist/AEA ",
+    "deploy:github": "ng build --output-path docs --base-href 'https://Gujejiani.github.io/AEA/'",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

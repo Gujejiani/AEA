@@ -1,5 +1,7 @@
 # AEA
 
+**Note:** This project uses server-side rendering (SSR). You can view the hosted version at [https://aea-6qi2.onrender.com/#/](https://aea-6qi2.onrender.com/#/).
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.
 
 ## Development server

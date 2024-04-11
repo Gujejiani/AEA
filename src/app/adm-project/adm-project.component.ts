@@ -53,13 +53,7 @@ export class AdmProjectComponent implements OnInit, OnDestroy {
       this.image = image.files[0];
     }
   }
-  // Import the functions you need from the SDKs you need
-
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+ 
 
   onSubmit(form: NgForm) {
     if (!this.loading) {
@@ -82,11 +76,14 @@ export class AdmProjectComponent implements OnInit, OnDestroy {
     }
   }
   uploadImage(title: string) {
-    const imageRef = ref(this.storage, `projects/${title}`);
+    if (typeof localStorage !== 'undefined') { 
+      const imageRef = ref(this.storage, `projects/${title}`);
 
-    uploadBytes(imageRef, this.image).then((res) => {
-      console.log(res);
-    });
+      uploadBytes(imageRef, this.image).then((res) => {
+        console.log(res);
+      });
+    }
+   
   }
 
   onDelete(key: string) {

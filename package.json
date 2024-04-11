@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve  --port 4000",
+    "start": "ng serve  --port 5000",
     "build:prod": "ng build --configuration production --base-href 'https://www.altereduacademy.ge/'",
     "build:http-server": "ng build --configuration production",
     "build:github": "ng build --configuration production --base-href 'https://Gujejiani.github.io/AEA/'",
@@ -11,7 +11,11 @@
     "deploy:github": "ng build --output-path docs --base-href 'https://Gujejiani.github.io/AEA/'",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "dev:ssr": "ng run AEA:serve-ssr",
+    "serve:ssr": "node dist/AEA/server/main.js",
+    "build:ssr": "ng build && ng run AEA:server",
+    "prerender": "ng run AEA:prerender"
   },
   "private": true,
   "dependencies": {
@@ -23,9 +27,12 @@
     "@angular/forms": "^16.2.12",
     "@angular/platform-browser": "^16.2.12",
     "@angular/platform-browser-dynamic": "^16.2.12",
+    "@angular/platform-server": "^16.2.12",
     "@angular/router": "^16.2.12",
     "@angular/service-worker": "^16.2.12",
+    "@nguniversal/express-engine": "^16.2.0",
     "bootstrap": "^5.2.2",
+    "express": "^4.15.2",
     "firebase": "^9.14.0",
     "node": "^16.15.0",
     "rxjs": "~6.6.0",
@@ -36,6 +43,8 @@
     "@angular-devkit/build-angular": "^16.2.13",
     "@angular/cli": "^16.2.13",
     "@angular/compiler-cli": "^16.2.12",
+    "@nguniversal/builders": "^16.2.0",
+    "@types/express": "^4.17.0",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "angular-cli-ghpages": "^1.0.7",

@@ -12,9 +12,13 @@ const firebaseConfig = {
     appId: "1:1069123909186:web:1e192af66c63e053861fdb",
     measurementId: "G-V4860GNSNG"
   };
+let storagee = null;
+  if (typeof localStorage !== 'undefined') { 
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  
+    storagee = getStorage(app)
+  };
 
-
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-
-  export const storage = getStorage(app)
+   export const storage = storagee;
+ 

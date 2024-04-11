@@ -72,9 +72,12 @@ export class RewievsComponent implements OnInit, AfterViewInit {
     }
   }
   goToSlide(slideIndex: number) {
-    const reviews = document.querySelectorAll('.reviewers');
-    reviews.forEach((review: HTMLElement, i) => {
-      review.style.transform = `translateX(${200 * (i - slideIndex)}%)`;
-    });
+    if (typeof localStorage !== 'undefined') { 
+      const reviews = document.querySelectorAll('.reviewers');
+      reviews.forEach((review: HTMLElement, i) => {
+        review.style.transform = `translateX(${200 * (i - slideIndex)}%)`;
+      });
+    }
+    
   }
 }

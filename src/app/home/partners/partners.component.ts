@@ -84,10 +84,13 @@ export class PartnersComponent implements OnInit, AfterViewInit {
   ];
   ngOnInit(): void {}
   ngAfterViewInit() {
-    const partners = document.querySelectorAll('.partners__section__partner');
-    partners.forEach((partner: HTMLElement, i) => {
-      partner.style.transform = `translateX(${this.translateValue * i}%)`;
-    });
+    if (typeof localStorage !== 'undefined') { 
+      const partners = document.querySelectorAll('.partners__section__partner');
+      partners.forEach((partner: HTMLElement, i) => {
+        partner.style.transform = `translateX(${this.translateValue * i}%)`;
+      });
+    }
+    
   }
   showPrevious() {
     this.moveSlider('left');
@@ -121,11 +124,14 @@ export class PartnersComponent implements OnInit, AfterViewInit {
   }
 
   goToSlide(slideIndex: number) {
-    const partners = document.querySelectorAll('.partners__section__partner');
-    partners.forEach((partner: HTMLElement, i) => {
-      partner.style.transform = `translateX(${
-        this.translateValue * (i - slideIndex)
-      }%)`;
-    });
+    if (typeof localStorage !== 'undefined') { 
+      const partners = document.querySelectorAll('.partners__section__partner');
+      partners.forEach((partner: HTMLElement, i) => {
+        partner.style.transform = `translateX(${
+          this.translateValue * (i - slideIndex)
+        }%)`;
+      });
+    }
+    
   }
 }

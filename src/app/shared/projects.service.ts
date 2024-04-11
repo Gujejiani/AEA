@@ -10,11 +10,15 @@ export type ProjectData  = {[key: string]: {title: string, text1: string, text2:
 @Injectable({providedIn: 'root'})
 export class projectsService {
     projects: ProjectData
-    imageRef = ref(storage, 'projects/')
+    imageRef = null;
 
     projectsData$ = new Subject<ProjectData>()
 
-    constructor(private http: HttpClient,){}
+    constructor(private http: HttpClient,){
+      if (typeof localStorage !== 'undefined') { 
+        this.imageRef= ref(storage, 'projects/')
+      }
+    }
 
     checkIfProjects(){
      return this.projects ? true: false
@@ -31,11 +35,14 @@ export class projectsService {
   startFetchingProjects(setInfo?: (projects: ProjectData)=>void){
       this.http.get('https://healthcontrol-76123.firebaseio.com/projects.json').subscribe(res=>{
 
-     const projectData = this.addImageUrls(res as ProjectData)
 
 
+     if (typeof localStorage !== 'undefined') { 
+      const projectData = this.addImageUrls(res as ProjectData)
       this.addProjects(projectData)
       this.projectsData$.next(projectData)
+     }
+    
 
     })
 

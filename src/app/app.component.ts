@@ -10,9 +10,12 @@ import { storage } from './shared/storage';
 })
 export class AppComponent  implements OnInit, OnDestroy{
   title = 'AEA';
-  imageRef = ref(storage, 'projects/')
+  imageRef = null
   constructor(private http: HttpClient, private projectService: projectsService){}
   ngOnInit(){
+    if (typeof localStorage !== 'undefined') { 
+      this.imageRef= ref(storage, 'projects/')
+    }
     console.log('Angular 16 is running! woohoo!')
      this.projectService.startFetchingProjects()
 

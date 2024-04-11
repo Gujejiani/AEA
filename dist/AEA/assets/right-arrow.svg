@@ -1,0 +1,34 @@
+<svg id="right-arrow" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #707070;
+        stroke-width: 0.5px;
+      }
+
+      .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #52565e;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Ellipse_1314" data-name="Ellipse 1314" class="cls-1">
+    <circle class="cls-3" cx="35" cy="35" r="35"/>
+    <circle class="cls-4" cx="35" cy="35" r="34.75"/>
+  </g>
+  <g id="Group_277" data-name="Group 277" transform="translate(-317.261 -379.291)">
+    <path id="Path_1561" data-name="Path 1561" class="cls-2" d="M-4461.435,4217.6l-5.495-5.495Z" transform="translate(4816.19 -3802.81)"/>
+    <path id="Path_1562" data-name="Path 1562" class="cls-2" d="M-4466.93,4226.055l5.495-5.495Z" transform="translate(4816.19 -3805.775)"/>
+  </g>
+</svg>

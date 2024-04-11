@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>ALTERNATIVE EDUCATION ACADEMY</title>
+    <base href="/"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" type="image/x-icon" href="./assets/logoOnly.svg"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+    <!-- seo meta tags -->
+    <meta name="description" content=" A non-governmental organization (NGO) supporting local youth to become
+        active and responsible citizens"/>
+    <meta name="keywords" content="AEA, Education, Organization, არასამთავრობო ორგანიზაცია, non formal education"/>
+    <meta name="author" content="Kakha Gujejiani"/>
+    <!-- seo meta tags End -->
+    <!-- facebook  meta tags -->
+    <meta property="og:url" content="https://www.altereduacademy.ge/"/>
+    <meta property="og:type" content="Organization"/>
+    <meta property="og:title" content="Alternative Education Academy"/>
+    <meta property="og:description" content="A non-governmental organization (NGO) supporting local youth to become
+    active and responsible citizens"/>
+    <meta property="og:image" content="./assets/welcome-22-min.jpg"/>
+    <!-- facebook  meta tags End -->
+    <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#1976d2">
+<link rel="stylesheet" href="styles.css"></head>
+  <body>
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "357419327775083");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v16.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <app-root></app-root>
+    <noscript>Please enable JavaScript to continue using this application.</noscript>
+<script src="runtime.js" type="module"></script><script src="polyfills.js" type="module"></script><script src="vendor.js" type="module"></script><script src="main.js" type="module"></script></body>
+</html>

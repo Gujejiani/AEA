@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="483" height="316" viewBox="0 0 483 316">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect id="blur" class="cls-1" width="483" height="316" rx="4"/>
+</svg>
